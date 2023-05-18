@@ -33,6 +33,13 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  h2 {
+    font-size: 4rem;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
 `;
 const InfoContent = styled.div`
   background-color: #e3ca92;
@@ -41,6 +48,7 @@ const InfoContent = styled.div`
   justify-content: center;
   gap: 8px;
   border-radius: 40px;
+
 `;
 const ImageWrapper = styled.div`
   flex-basis: 40%;
@@ -48,4 +56,13 @@ const ImageWrapper = styled.div`
 `;
 const ContentWrapper = styled.div`
   flex-basis: 60%;
+  padding: 32px;
+
+  p {
+    font-size: 1.5rem;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: right;
+  }
 `;

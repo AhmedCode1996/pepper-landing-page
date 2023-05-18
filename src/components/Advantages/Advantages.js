@@ -19,6 +19,13 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  h2 {
+    font-size: 4rem;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
 `;
 
 const ImageWrapper = styled.div``;

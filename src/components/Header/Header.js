@@ -36,15 +36,28 @@ export default Header;
 
 const NavHeader = styled.nav`
   padding: 32px;
-  /* border: solid black; */
 `;
 const NavList = styled.ul`
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   padding: 4px;
-  /* border: solid black; */
 
+  li a {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+  }
+
+  li:first-of-type {
+    background-color: black;
+    padding: 16px;
+    border-radius: 32px;
+
+    a {
+      color: white;
+    }
+  }
   li:last-of-type {
     margin-left: auto;
   }

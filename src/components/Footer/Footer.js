@@ -20,7 +20,6 @@ const FooterSection = styled.footer`
   background-image: url(${FooterBg});
   height: 350px;
   background-size: cover;
-  /* padding-block: 80px; */
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
@@ -32,6 +31,12 @@ const FooterWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-bottom: 64px;
+
+  p {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
 `;
 const ImageWrapper = styled.div`
   width: 100px;

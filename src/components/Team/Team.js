@@ -4,7 +4,9 @@ import styled from "styled-components";
 function Team() {
   return (
     <Wrapper>
-      <h2 style={{ textAlign: "center" }}>فريق العمل</h2>
+      <h2 className="wrapper-title" style={{ textAlign: "center" }}>
+        فريق العمل
+      </h2>
       <Content>
         <MembersWrapper>
           <img src={Members} alt="Members Screen" />
@@ -26,6 +28,14 @@ export default Team;
 
 const Wrapper = styled.div`
   padding: 80px 32px;
+
+  .wrapper-title {
+    font-size: 4rem;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -36,4 +46,19 @@ const Content = styled.div`
 `;
 
 const MembersWrapper = styled.div``;
-const ContentWrapper = styled.div``;
+const ContentWrapper = styled.div`
+  p {
+    font-family: "Tajawal", sans-serif;
+    font-size: 2rem;
+    text-align: right;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  h2 {
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    color: hsl(223.8deg 58.14% 33.73%);
+  }
+`;

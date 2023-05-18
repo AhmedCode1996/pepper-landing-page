@@ -40,6 +40,14 @@ export default Form;
 
 const Wrapper = styled.div`
   padding: 64px;
+
+  h2 {
+    font-size: 4rem;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
 `;
 const Content = styled.div`
   position: relative;
@@ -92,6 +100,11 @@ const LeftSide = styled.div`
     outline: none;
     padding: 12px 8px;
     text-align: right;
+
+    &::placeholder {
+      color: black;
+      font-weight: bold;
+    }
   }
   textarea {
     background-color: #ead6b4;
@@ -102,6 +115,11 @@ const LeftSide = styled.div`
     text-align: right;
     padding: 12px 8px;
     flex-basis: 40%;
+
+    &::placeholder {
+      color: black;
+      font-weight: bold;
+    }
   }
 `;
 const InputWrapper = styled.div`
