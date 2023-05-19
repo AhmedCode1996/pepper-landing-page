@@ -17,7 +17,12 @@ function Team() {
             حاسبات وتكنولوجيا المعلومات
           </p>
           <h2>الجامعة المصرية للتعلم الإلكترونى الأهلية</h2>
-          <img src={Logo} alt="University Logo" />
+          <img className="contact-logo" src={Logo} alt="University Logo" />
+          <p>يمكنكم التواصل مع الفريق عبر الإيميل الإلكترونى</p>
+          <p className="contact-email">Contact@Hafedk.org</p>
+          <p className="copyrights-contact">
+            All Copyrights Reserved©2022-2023
+          </p>
         </ContentWrapper>
       </Content>
     </Wrapper>
@@ -40,19 +45,39 @@ const Wrapper = styled.div`
 const Content = styled.div`
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 32px;
+  /* align-items: flex-start; */
+  /* gap: 32px; */
   padding: 16px;
 `;
 
 const MembersWrapper = styled.div``;
 const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 50%;
+  gap: 8px;
   p {
     font-family: "Tajawal", sans-serif;
     font-size: 2rem;
     text-align: right;
     font-weight: bold;
     line-height: 1.3;
+
+    &:first-of-type {
+      max-width: 85%;
+    }
+  }
+  .contact-email {
+    color: hsl(223.8deg 58.14% 33.73%);
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+  .copyrights-contact {
+    font-size: 1.6rem;
+  }
+  .contact-logo {
+    max-width: 500px;
   }
   h2 {
     font-family: "Tajawal", sans-serif;

@@ -46,20 +46,19 @@ const InfoContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 80px;
   border-radius: 40px;
-
 `;
 const ImageWrapper = styled.div`
-  flex-basis: 40%;
+  flex-basis: 30%;
   transform: scale(1.2);
 `;
 const ContentWrapper = styled.div`
-  flex-basis: 60%;
-  padding: 32px;
+  flex-basis: 40%;
+  padding: 8px;
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: "Tajawal", sans-serif;
     font-weight: 700;
     line-height: 1.5;
