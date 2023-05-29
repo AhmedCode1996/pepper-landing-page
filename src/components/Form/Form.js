@@ -4,23 +4,65 @@ import DeleteBtn from "./../../assets/delete.png";
 import CallImage from "./../../assets/Layer29.png";
 import MessageImage from "./../../assets/Layer26.png";
 import PhoneImage from "./../../assets/layer31.png";
+import { useState } from "react";
 function Form() {
+  const [contactInfo, setContactInfo] = useState({
+    user: "",
+    email: "",
+    message: "",
+  });
+  const inputHandler = (e) => {
+    const { name, value } = e.target;
+    setContactInfo((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
+  const clearFormData = () => {
+    setContactInfo({ user: "", email: "", message: "" });
+  };
+  const forwardedContactInfo = `mailto:contact@hafedk.org?subject=contactInformation&body=from ${contactInfo.user}  \n  ${contactInfo.message}`;
+
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <h2 style={{ textAlign: "center", marginBottom: "24px" }}>تواصل معنا </h2>
       <Content>
         <LeftSide>
           <FormArea>
             <InputWrapper>
-              <input type="email" placeholder="إيميلك الإلكترونى" />
-              <input type="text" placeholder="الإسم" />
+              <input
+                name="email"
+                type="email"
+                value={contactInfo.email}
+                onChange={inputHandler}
+                placeholder="إيميلك الإلكترونى"
+              />
+              <input
+                name="user"
+                type="text"
+                value={contactInfo.user}
+                onChange={inputHandler}
+                placeholder="الإسم"
+              />
             </InputWrapper>
-            <textarea placeholder="الرسالة"></textarea>
+            <textarea
+              name="message"
+              value={contactInfo.message}
+              onChange={inputHandler}
+              placeholder="الرسالة"
+            ></textarea>
             <ButtonsGroup>
-              <button>
+              <a
+                href={
+                  contactInfo.user &&
+                  contactInfo.email &&
+                  contactInfo.message &&
+                  forwardedContactInfo
+                }
+              >
                 <img src={SendBtn} alt="Send Button" />
-              </button>
-              <button>
+              </a>
+              <button onClick={() => clearFormData()}>
                 <img src={DeleteBtn} alt="Delete Button" />
               </button>
             </ButtonsGroup>
@@ -42,7 +84,7 @@ const Wrapper = styled.div`
   padding: 64px;
 
   h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Tajawal", sans-serif;
     font-weight: 900;
     line-height: 1.2;
@@ -130,6 +172,10 @@ const ButtonsGroup = styled.div`
   display: flex;
   gap: 12px;
   margin-bottom: 16px;
+
+  button {
+    cursor: pointer;
+  }
 `;
 const RightSide = styled.div`
   padding-inline: 40px;
@@ -137,4 +183,8 @@ const RightSide = styled.div`
 
 const ImageWrapper = styled.div`
   /* margin-inline: 56px; */
+
+  img {
+    min-width: 150px;
+  }
 `;

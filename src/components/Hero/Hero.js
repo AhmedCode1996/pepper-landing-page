@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeroImage from "./../../assets/Screens.png";
 import styled from "styled-components";
 function Hero() {
@@ -13,8 +14,15 @@ function Hero() {
         <h2> صحة محاصيلك</h2>
         <p>التطبيق الاول للتعرف على أمراض الفلفل مبكرا بالذكاء الاصطناعى</p>
         <ButtonGroup>
-          <button>احصل على التطبيق</button>
-          <button>افحص محصولك الان</button>
+          <a
+            className="hrefButton"
+            href="https://expo.dev/artifacts/eas/tS59w8TZxjqhb5jWhxHzGD.apk"
+          >
+            احصل على التطبيق
+          </a>
+          <a className="hrefButton" href="https://pepperscan.herokuapp.com/">
+            افحص محصولك الان
+          </a>
         </ButtonGroup>
       </RightSide>
     </Wrapper>
@@ -28,15 +36,18 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const LeftSide = styled.div``;
+const LeftSide = styled.div`
+  flex: 1;
+`;
 const ImageWrapper = styled.div`
-  max-width: 80%;
+  /* max-width: 80%; */
 `;
 const RightSide = styled.div`
   padding-inline: 32px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  flex: 1;
   h2 {
     text-align: right;
     width: max-content;
@@ -56,12 +67,12 @@ const RightSide = styled.div`
 `;
 const ButtonGroup = styled.div`
   display: flex;
-  align-self: center;
+  align-self: flex-end;
   gap: 32px;
   margin-top: 16px;
 
-  button {
-    padding: 24px;
+  .hrefButton {
+    padding: 16px;
     border-radius: 32px;
     background-color: transparent;
     font-weight: bold;

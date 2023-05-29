@@ -33,7 +33,7 @@ const FooterWrapper = styled.div`
   margin-bottom: 64px;
 
   p {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.4;
   }

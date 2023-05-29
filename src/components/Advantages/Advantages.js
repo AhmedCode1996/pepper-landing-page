@@ -2,10 +2,9 @@ import Photo from "./../../assets/المميزات.png";
 import styled from "styled-components";
 function Advantages() {
   return (
-    <Wrapper>
+    <Wrapper id="adv">
       <h2>الممزيات </h2>
-
-      <ImageWrapper>
+      <ImageWrapper target="_blank" href="https://pepperscan.herokuapp.com/">
         <img src={Photo} alt="advantages screen" />
       </ImageWrapper>
     </Wrapper>
@@ -20,7 +19,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: "Tajawal", sans-serif;
     font-weight: 900;
     line-height: 1.2;
@@ -28,4 +27,4 @@ const Wrapper = styled.section`
   }
 `;
 
-const ImageWrapper = styled.div``;
+const ImageWrapper = styled.a``;

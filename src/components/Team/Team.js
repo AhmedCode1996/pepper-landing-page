@@ -3,7 +3,7 @@ import Logo from "./../../assets/eelu-logo.png";
 import styled from "styled-components";
 function Team() {
   return (
-    <Wrapper>
+    <Wrapper id="team">
       <h2 className="wrapper-title" style={{ textAlign: "center" }}>
         فريق العمل
       </h2>
@@ -19,7 +19,9 @@ function Team() {
           <h2>الجامعة المصرية للتعلم الإلكترونى الأهلية</h2>
           <img className="contact-logo" src={Logo} alt="University Logo" />
           <p>يمكنكم التواصل مع الفريق عبر الإيميل الإلكترونى</p>
-          <p className="contact-email">Contact@Hafedk.org</p>
+          <a href="mailto:contact@hafedk.org" className="contact-email">
+            Contact@Hafedk.org
+          </a>
           <p className="copyrights-contact">
             All Copyrights Reserved©2022-2023
           </p>
@@ -35,7 +37,7 @@ const Wrapper = styled.div`
   padding: 80px 32px;
 
   .wrapper-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Tajawal", sans-serif;
     font-weight: 900;
     line-height: 1.2;
@@ -45,12 +47,18 @@ const Wrapper = styled.div`
 const Content = styled.div`
   display: flex;
   justify-content: center;
-  /* align-items: flex-start; */
-  /* gap: 32px; */
   padding: 16px;
+  flex-wrap: wrap;
+  gap: 32px;
 `;
 
-const MembersWrapper = styled.div``;
+const MembersWrapper = styled.div`
+  flex-basis: 35%;
+
+  img {
+    min-width: 430px;
+  }
+`;
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -59,29 +67,35 @@ const ContentWrapper = styled.div`
   gap: 8px;
   p {
     font-family: "Tajawal", sans-serif;
-    font-size: 2rem;
+    font-size: 1.4rem;
     text-align: right;
     font-weight: bold;
     line-height: 1.3;
 
     &:first-of-type {
       max-width: 85%;
+      text-align: center;
+    }
+    &:nth-of-type(2) {
+      text-align: center;
     }
   }
   .contact-email {
     color: hsl(223.8deg 58.14% 33.73%);
-    font-size: 1.6rem;
-    margin-bottom: 16px;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: bold;
   }
   .copyrights-contact {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .contact-logo {
-    max-width: 500px;
+    min-width: 350px;
+    max-width: 400px;
   }
   h2 {
     font-family: "Tajawal", sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
     color: hsl(223.8deg 58.14% 33.73%);

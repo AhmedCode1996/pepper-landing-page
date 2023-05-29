@@ -3,7 +3,7 @@ import InfoImage from "./../../assets/iPhone-13-05.png";
 import styled from "styled-components";
 function AppInformation() {
   return (
-    <Wrapper>
+    <Wrapper id="info">
       <h2>عن التطبيق</h2>
       <InfoContent>
         <ImageWrapper>
@@ -34,7 +34,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: "Tajawal", sans-serif;
     font-weight: 900;
     line-height: 1.2;
@@ -58,10 +58,14 @@ const ContentWrapper = styled.div`
   padding: 8px;
 
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: "Tajawal", sans-serif;
     font-weight: 700;
     line-height: 1.5;
     text-align: right;
+
+    @media (max-width: 1000px) {
+      font-size: 1rem;
+    }
   }
 `;

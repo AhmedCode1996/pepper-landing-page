@@ -5,19 +5,19 @@ function Header() {
     <NavHeader>
       <NavList>
         <li>
-          <a href="/">افحص محصولك الان</a>
+          <a href="https://pepperscan.herokuapp.com/">افحص محصولك الان</a>
         </li>
         <li>
-          <a href="/">تواصل معنا</a>
+          <a href="#contact">تواصل معنا</a>
         </li>
         <li>
-          <a href="/">فريق العمل</a>
+          <a href="#team">فريق العمل</a>
         </li>
         <li>
-          <a href="/">المميزات</a>
+          <a href="#adv">المميزات</a>
         </li>
         <li>
-          <a href="/">عن التطبيق</a>
+          <a href="#info">عن التطبيق</a>
         </li>
         <li>
           <a href="/">الرئيسية</a>
@@ -36,15 +36,18 @@ export default Header;
 
 const NavHeader = styled.nav`
   padding: 32px;
+  display: flex;
 `;
 const NavList = styled.ul`
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 1.5rem;
   padding: 4px;
+  flex: 1;
 
   li a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: black;
     font-weight: bold;
   }
